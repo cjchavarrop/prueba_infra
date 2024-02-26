@@ -1,5 +1,7 @@
 FROM openjdk:17.0-slim
-RUN addgroup -S devopsc && adduser -S javams -G devopsc
+# Agrega el usuario y el grupo
+RUN groupadd devopsc \
+    && useradd -g devopsc javams
 USER javams:devopsc
 ENV JAVA_OPTS=""
 ARG JAR_FILE
