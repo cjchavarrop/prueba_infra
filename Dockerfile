@@ -9,7 +9,7 @@ ADD ${JAR_FILE} app.jar
 
 VOLUME /tmp
 EXPOSE 7280
-ENTRYPOINT [ "sh", "-C", "java -Dspring.profiles.active=production -jar /app.jar"]
+ENTRYPOINT ["java","-jar","app.jar"]
 
 # ENTRYPOINT [ "sh", "-C", "java $JAVA_OPTS -Djava.security.egd=file:/dev/./urandom -jar /app.jar"]
 
